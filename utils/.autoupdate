@@ -1,0 +1,29 @@
+################################################################################
+# Executes command with a timeout
+# Params:
+#   $1 timeout in seconds
+#   $2 command
+# Returns 1 if timed out 0 otherwise
+au_timeout() {
+
+    time=$1
+
+    # start the command in a subshell to avoid problem with pipes
+    # (spawn accepts one command)
+    command="/bin/sh -c \"$2\""
+    expect -c "set echo \"-noecho\"; set timeout $time; spawn -noecho $command; expect timeout { exit 1 } eof { exit 0 }"    
+}
+
+cd $PATH_TO_DOTFILES
+
+BRANCH_NAME=`git rev-parse --abbrev-ref HEAD`
+
+if [ "x"$UPDATE_ON_LOGIN = "xtrue" ] && git diff --quiet && [ "x"$BRANCH_NAME  = "xmaster" ]; then
+    if type timelimit >/dev/null; then
+        timelimit -T3 -t3 -q git pull --rebase origin master &> /dev/null &|
+    else
+        au_timeout 3 "git pull --rebase origin master &> /dev/null" &|
+    fi
+fi
+
+cd - &> /dev/null
