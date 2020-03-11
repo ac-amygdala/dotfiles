@@ -7,7 +7,7 @@ function svg2dataURI {
 }
 
 function fgr {
-    find $1 -name $2 -exec grep -Hn $4 --color=always $3 {} \;
+    find $1 -name $2 -exec grep -Hn $4 --color=always $3 {} \; $5
 }
 
 function nf {

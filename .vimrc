@@ -470,10 +470,10 @@ call arpeggio#map('i', '', 0, 'jk', '<ESC>')
 colorscheme solarized
 
 " Setting up light color scheme
-set background=light
+set background=dark
 
 " set highlighting for colorcolumn
-highlight ColorColumn ctermbg=lightGrey
+" highlight ColorColumn ctermbg=lightGrey
 
 "--------------------------------------------------
 " General options
@@ -614,14 +614,14 @@ set expandtab
 set smarttab
 
 " number of spaces to use for each step of indent
-set shiftwidth=4
+set shiftwidth=2
 
 " Number of spaces that a Tab in the file counts for
-set tabstop=4
+set tabstop=2
 
 " Same but for editing operation (not shure what exactly does it means)
 " but in most cases tabstop and softtabstop better be the same
-set softtabstop=4
+set softtabstop=2
 
 " Round indent to multiple of 'shiftwidth'.
 " Indentation always be multiple of shiftwidth
