@@ -28,7 +28,7 @@ export LS_COLORS="di=1;:ln=35;:so=32;:pi=33;:ex=31;:bd=34;46:cd=34;43:su=0;41:sg
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-SOLARIZED_THEME=light
+SOLARIZED_THEME=dark
 ZSH_THEME="blinks"
 
 # Example aliases
@@ -79,7 +79,25 @@ export FZF_DEFAULT_OPTS="--no-color"
 # Customize to your needs..."
 export PATH=$PATH:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/Berkanavt/bin:/Berkanavt/bin/scripts:~/node_modules/.bin:/usr/local/share/dotnet:/usr/local/share/dotnet/dotnet:${PATH}
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-[ -s "/Users/amygdala/.dnx/dnvm/dnvm.sh" ] && . "/Users/amygdala/.dnx/dnvm/dnvm.sh" # Load dnvm
+#[ -s "/Users/amygdala/.dnx/dnvm/dnvm.sh" ] && . "/Users/amygdala/.dnx/dnvm/dnvm.sh" # Load dnvm
+
+source ~/.envrc
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
+# Python pip
+#export PATH="${PATH_TO_DOTFILES}/../Library/Python/2.7/bin:${PATH}"
+
+export LDFLAGS="-L/usr/local/opt/imagemagick@6/lib"
+export CPPFLAGS="-I/usr/local/opt/imagemagick@6/include"
+export PKG_CONFIG_PATH="/usr/local/opt/imagemagick@6/lib/pkgconfig"
+
+# Python vars
+export PATH=/usr/local/share/python:$PATH
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
+source /usr/local/bin/virtualenvwrapper.sh
