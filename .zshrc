@@ -74,30 +74,8 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 export FZF_DEFAULT_OPTS="--no-color"
 
 # Add fzf config
-# source ~/.fzf.zsh
+source ~/.fzf.zsh
 
 # Customize to your needs..."
 export PATH=$PATH:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/Berkanavt/bin:/Berkanavt/bin/scripts:~/node_modules/.bin:/usr/local/share/dotnet:/usr/local/share/dotnet/dotnet:${PATH}
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-#[ -s "/Users/amygdala/.dnx/dnvm/dnvm.sh" ] && . "/Users/amygdala/.dnx/dnvm/dnvm.sh" # Load dnvm
-
-source ~/.envrc
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-
-# Python pip
-#export PATH="${PATH_TO_DOTFILES}/../Library/Python/2.7/bin:${PATH}"
-
-export LDFLAGS="-L/usr/local/opt/imagemagick@6/lib"
-export CPPFLAGS="-I/usr/local/opt/imagemagick@6/include"
-export PKG_CONFIG_PATH="/usr/local/opt/imagemagick@6/lib/pkgconfig"
-
-# Python vars
-export PATH=/usr/local/share/python:$PATH
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
-source /usr/local/bin/virtualenvwrapper.sh

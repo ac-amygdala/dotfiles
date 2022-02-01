@@ -7,14 +7,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
@@ -36,21 +28,3 @@ fi
 
 #tmux
 tmux="TERM=screen-256color-bce tmux"
-
-#serp-specific aliases
-alias findBlock='find blocks-common blocks-desktop blocks-touch-pad block-touch libs -name'
-
-#serp-specific make
-alias rsp='rm -rf ./pages-desktop/search/all/all.priv.js ./pages-desktop/search/all/all.priv.js && gmake -j10 ./pages-desktop/search/all/_all.priv.js'
-alias rsb='rm -rf ./pages-desktop/search/all/all.bemhtml.js ./pages-desktop/search/all/all.bemhtml.js && gmake -j10 ./pages-desktop/search/all/_all.bemhtml.js'
-alias rsj='rm -rf ./pages-desktop/search/search.{tr,ru}.js ./pages-desktop/search/_search.{tr,ru}.js && gmake -j10 ./pages-desktop/search/_search.{tr,ru}.js'
-alias rsc='rm -rf ./pages-desktop/search/search.deps.js && gmake -j10 ./pages-desktop/search/'
-
-alias rtp='rm -rf ./pages-touch-pad/search/all/all.priv.js ./pages-touch-pad/search/all/all.priv.js && gmake -j10 ./pages-touch-pad/search/all/_all.priv.js'
-alias rtb='rm -rf ./pages-touch-pad/search/all/all.bemhtml.js ./pages-touch-pad/search/all/all.bemhtml.js && gmake -j10 ./pages-touch-pad/search/all/_all.bemhtml.js'
-alias rtj='rm -rf ./pages-touch-pad/search/search.{tr,ru}.js ./pages-touch-pad/search/_search.{tr,ru}.js && gmake -j10 ./pages-touch-pad/search/_search.{tr,ru}.js'
-alias rtc='rm -rf ./pages-touch-pad/search/search.deps.js && gmake -j10 ./pages-touch-pad/search/'
-
-alias rsa='gmake -Bj7'
-alias fullUp='gup && rm -rf libs && gco libs && make libs && make -Bj7 YENV=Testing'
-
