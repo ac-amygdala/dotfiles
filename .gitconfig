@@ -1,11 +1,12 @@
 [user]
-	name = Andrey Cherepaha
+	name = Andrei Charapakha
 	email = ac.amygdala@gmail.com
 
 [core]
-    excludesfile = ~/.gitexcludes
-    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab
-    editor = vim
+  excludesfile = ~/.gitexcludes
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab
+  editor = vim
+  attributesfile = ~/.gitattributes
 
 [merge]
     log = true
@@ -72,3 +73,12 @@
 
 [help]
 	autocorrect = 1
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
+[diff "image"]
+	textconv = imgcat
+	command = imgdiff
+[submodule]
+	recurse = true

@@ -4,3 +4,5 @@ if [ -z "$ZSH" ]; then
 fi;
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+source /Users/amygdala/.docker/init-bash.sh || true # Added by Docker Desktop

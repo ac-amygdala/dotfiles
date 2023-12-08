@@ -1,5 +1,7 @@
+export GPG_TTY=$TTY
+
 # Lang options for russian lang
-export LANG=ru_RU.UTF-8
+# export LANG=ru_RU.UTF-8
 
 # Autoupdate
 # Comment this line, if you want to disable autoupdate on startup
@@ -79,3 +81,6 @@ source ~/.fzf.zsh
 # Customize to your needs..."
 export PATH=$PATH:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/Berkanavt/bin:/Berkanavt/bin/scripts:~/node_modules/.bin:/usr/local/share/dotnet:/usr/local/share/dotnet/dotnet:${PATH}
 
+source ~/.projects.env
+
+source /Users/amygdala/.docker/init-zsh.sh || true # Added by Docker Desktop
