@@ -11,7 +11,7 @@ if [ ! -d "$OHMYZSH" ]; then
 fi
 
 if [ ! -d "$FZF" ]; then
-    git clone https://github.com/junegunn/fzf.git $FZF
+    git clone git@github.com:junegunn/fzf.git $FZF
 fi
 
 git pull

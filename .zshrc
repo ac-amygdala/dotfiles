@@ -82,5 +82,3 @@ source ~/.fzf.zsh
 export PATH=$PATH:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/Berkanavt/bin:/Berkanavt/bin/scripts:~/node_modules/.bin:/usr/local/share/dotnet:/usr/local/share/dotnet/dotnet:${PATH}
 
 source ~/.projects.env
-
-source /Users/amygdala/.docker/init-zsh.sh || true # Added by Docker Desktop
