@@ -7,7 +7,7 @@ FZF=".fzf/"
 
 
 if [ ! -d "$OHMYZSH" ]; then
-    git clone git://github.com/robbyrussell/oh-my-zsh.git $OHMYZSH
+    git clone git@github.com:ohmyzsh/ohmyzsh.git $OHMYZSH
 fi
 
 if [ ! -d "$FZF" ]; then
